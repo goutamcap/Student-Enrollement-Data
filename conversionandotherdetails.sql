@@ -9,7 +9,8 @@ SELECT
     s.enrollment_date,
     e.join_date
 FROM Students s
-INNER JOIN Enrollments e ON s.student_id = e.student_id;
+INNER JOIN Enrollments e ON s.student_id = e.student_id
+WHERE s.enrolled = 1;
 
 --Enrolled but not Joined
 SELECT 
@@ -48,6 +49,7 @@ GROUP BY course_opted;
 
 
 -- end
+
 
 
 
